@@ -8,8 +8,6 @@ export const getExpensesByCategory = async (
   res: Response
 ): Promise<void> => {
   try {
-    const expenseByCategorySummaryRaw = await prisma.expenseByCategory.findMany(
-  
   } catch (error) {
     res.status(500).json({ message: "Error retrieving expenses by category" });
   }
